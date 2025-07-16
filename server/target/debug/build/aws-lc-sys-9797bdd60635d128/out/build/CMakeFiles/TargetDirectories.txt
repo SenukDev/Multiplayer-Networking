@@ -1,0 +1,13 @@
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/rust_wrapper.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/INSTALL.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/CMakeFiles/boringssl_prefix_symbols.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/CMakeFiles/INSTALL.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/CMakeFiles/ALL_BUILD.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/crypto/CMakeFiles/crypto_objects.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/crypto/CMakeFiles/crypto.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/crypto/CMakeFiles/INSTALL.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/crypto/fipsmodule/CMakeFiles/fipsmodule.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/crypto/fipsmodule/CMakeFiles/INSTALL.dir
+C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/aws-lc/util/fipstools/CMakeFiles/INSTALL.dir
