@@ -26,7 +26,7 @@ cargo:rerun-if-env-changed=WindowsSDKVersion
 WindowsSDKVersion = None
 cargo:rerun-if-env-changed=LIB
 LIB = None
-PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
+PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\mkcert;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
 cargo:rerun-if-env-changed=INCLUDE
 INCLUDE = None
 HOST = Some(x86_64-pc-windows-msvc)
@@ -62,19 +62,19 @@ p256.c
 limbs.c
 mem.c
 poly1305.c
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
+curve25519_64_adx.c
 crypto.c
 cpu_intel.c
-curve25519_64_adx.c
 p256-nistz.c
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
 exit code: 0
 exit code: 0
 exit code: 0
@@ -97,7 +97,7 @@ cargo:rerun-if-env-changed=WindowsSDKVersion
 WindowsSDKVersion = None
 cargo:rerun-if-env-changed=LIB
 LIB = None
-PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
+PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\mkcert;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
 cargo:rerun-if-env-changed=INCLUDE
 INCLUDE = None
 HOST = Some(x86_64-pc-windows-msvc)

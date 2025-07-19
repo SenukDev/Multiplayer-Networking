@@ -1,264 +1,123 @@
-use anyhow::{Context, Result};
-use bytes::Bytes;
-use h3::{
-    ext::Protocol,
-    quic::{self},
-    server::Connection,
-};
-use h3_quinn::quinn::{self, crypto::rustls::QuicServerConfig};
-use h3_webtransport::server::{self, WebTransportSession};
-use http::Method;
-use rustls::pki_types::{CertificateDer, PrivateKeyDer, ServerName, UnixTime};
-use std::{net::SocketAddr, path::PathBuf, sync::Arc, time::Duration};
-use structopt::StructOpt;
-use tokio::io::{AsyncRead, AsyncReadExt, AsyncWrite, AsyncWriteExt};
-use tokio::pin;
-use tracing::{error, info, trace_span};
-use rustls::DigitallySignedStruct;
-use rustls::SignatureScheme;
-use rustls::client::danger::{ServerCertVerifier, ServerCertVerified, HandshakeSignatureValid};
+use std::{fs, net::SocketAddr, sync::Arc};
+use h3::server::Connection as H3ServerConn;
+use h3_quinn::Connection as H3QuinnConn;
+use quinn::{Endpoint, ServerConfig};
+use tracing::{error, info};
+use tracing_subscriber;
+use bytes::{Bytes};
+use rustls_pki_types::{CertificateDer, PrivateKeyDer, PrivatePkcs8KeyDer};
+use quinn::crypto::rustls::HandshakeData;
+use quinn::crypto::rustls::QuicServerConfig;
+use http::{Request, Response, StatusCode};
+use h3::server as H3Server;
 
-#[derive(StructOpt, Debug)]
-#[structopt(name = "server")]
-struct Opt {
-    #[structopt(
-        short,
-        long,
-        default_value = "[::]:4433",
-        help = "What address:port to listen for new connections"
-    )]
-    pub listen: SocketAddr,
+pub const ALPN_QUIC_HTTP: &[&[u8]] = &[b"h3", b"h3-29"];
 
-    #[structopt(flatten)]
-    pub certs: Certs,
-}
+fn load_der_cert_and_key() -> anyhow::Result<(Vec<CertificateDer<'static>>, PrivateKeyDer<'static>)> {
+    let cert_bytes = fs::read("cert.der")?;
+    let key_bytes = fs::read("key.der")?;
 
-#[derive(StructOpt, Debug)]
-pub struct Certs {
-    #[structopt(
-        long,
-        short,
-        default_value = "localhost.crt.der",
-        help = "Certificate for TLS. If present, `--key` is mandatory."
-    )]
-    pub cert: PathBuf,
+    let cert = CertificateDer::from(cert_bytes);
+    let pkcs8 = PrivatePkcs8KeyDer::from(key_bytes);
+    let key = PrivateKeyDer::from(pkcs8);
 
-    #[structopt(
-        long,
-        short,
-        default_value = "localhost.key.der",
-        help = "Private key for the certificate."
-    )]
-    pub key: PathBuf,
+    Ok((vec![cert], key))
 }
 
 #[tokio::main]
-async fn main() -> Result<()> {
-    // 🔐 Required for rustls 0.23+
-    rustls::crypto::aws_lc_rs::default_provider()
-        .install_default()
-        .expect("Failed to install crypto provider");
+async fn main() -> anyhow::Result<()> {
+    rustls::crypto::CryptoProvider::install_default(
+        rustls::crypto::ring::default_provider()
+    ).unwrap();
 
-    // 📋 Logging/tracing
-    tracing_subscriber::fmt()
-        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
-        .with_span_events(tracing_subscriber::fmt::format::FmtSpan::FULL)
-        .with_writer(std::io::stderr)
-        .init();
+    tracing_subscriber::fmt::init();
 
-    let opt = Opt::from_args();
-    tracing::info!("Opt: {opt:#?}");
-    let Certs { cert, key } = opt.certs;
 
-    let cert = CertificateDer::from(std::fs::read(cert).context("Failed to read cert")?);
-    let key = PrivateKeyDer::try_from(std::fs::read(key).context("Failed to read key")?)
-        .expect("Invalid DER private key");
+    // Load cert and key from files (assumes valid PKCS#8 PEM format)
 
-    let mut tls_config = rustls::ServerConfig::builder()
+    let (certs, key) = load_der_cert_and_key()?;
+
+    let mut server_crypto = rustls::ServerConfig::builder()
         .with_no_client_auth()
-        .with_single_cert(vec![cert], key)?;
+        .with_single_cert(certs, key)?;
+    server_crypto.alpn_protocols = ALPN_QUIC_HTTP.iter().map(|&x| x.into()).collect();
+    server_crypto.key_log = Arc::new(rustls::KeyLogFile::new());
 
-    tls_config.max_early_data_size = u32::MAX;
-    tls_config.alpn_protocols = vec![
-        b"h3".to_vec(),
-        b"h3-32".to_vec(),
-        b"h3-31".to_vec(),
-        b"h3-30".to_vec(),
-        b"h3-29".to_vec(),
-    ];
 
-    let mut server_config =
-        quinn::ServerConfig::with_crypto(Arc::new(QuicServerConfig::try_from(tls_config)?));
+    let mut server_config = ServerConfig::with_crypto(Arc::new(QuicServerConfig::try_from(server_crypto)?));
+    let transport_config = Arc::get_mut(&mut server_config.transport).unwrap();
+    transport_config.max_concurrent_uni_streams(100_u8.into());
 
-    let mut transport_config = quinn::TransportConfig::default();
-    transport_config.keep_alive_interval(Some(Duration::from_secs(2)));
-    server_config.transport = Arc::new(transport_config);
+    // Bind and start server
+    let addr: SocketAddr = "0.0.0.0:8443".parse()?;
+    let endpoint = Endpoint::server(server_config, addr)?;
+    info!("Listening on https://{}", addr);
 
-    let endpoint = quinn::Endpoint::server(server_config, opt.listen)?;
-    info!("listening on {}", opt.listen);
+    // Accept connections
+    while let Some(connecting) = endpoint.accept().await {
 
-    while let Some(new_conn) = endpoint.accept().await {
         tokio::spawn(async move {
-            match new_conn.await {
-                Ok(conn) => {
-                    info!("new http3 connection");
-                    let h3_conn = h3::server::builder()
+            info!("HERE");
+            match connecting.await {
+                Ok(quinn_conn) => {
+                    let alpn = quinn_conn
+                    .handshake_data()
+                    .and_then(|data| {
+                        data.downcast_ref::<HandshakeData>()
+                        .and_then(|hs| hs.protocol.clone())
+                    });
+
+                    info!(
+                        "🔍 Negotiated ALPN: {:?}",
+                        alpn.map(|p| String::from_utf8(p).unwrap_or_else(|_| "<invalid utf8>".to_string()))
+                    );
+
+                    let h3_quinn_conn = H3QuinnConn::new(quinn_conn);
+
+                    let mut builder = H3Server::builder();
+                    builder
                         .enable_webtransport(true)
                         .enable_extended_connect(true)
                         .enable_datagram(true)
-                        .max_webtransport_sessions(1)
-                        .send_grease(true)
-                        .build(h3_quinn::Connection::new(conn))
-                        .await
-                        .unwrap();
+                        .max_webtransport_sessions(100);
 
-                    if let Err(err) = handle_connection(h3_conn).await {
-                        error!("Failed to handle connection: {err:?}");
-                    }
-                }
-                Err(err) => {
-                    error!("Connection failed: {err:?}");
-                }
+                    let mut h3_conn = builder.build(h3_quinn_conn).await.unwrap();
+
+
+                    tokio::spawn(handle_h3(h3_conn));
+                },
+                Err(e) => error!("QUIC handshake failed: {e:?}"),
             }
         });
     }
-
-    endpoint.wait_idle().await;
     Ok(())
 }
 
-async fn handle_connection(mut conn: Connection<h3_quinn::Connection, Bytes>) -> Result<()> {
-    loop {
-        match conn.accept().await {
-            Ok(Some(resolver)) => {
-                let (req, stream) = match resolver.resolve_request().await {
-                    Ok(request) => request,
-                    Err(err) => {
-                        error!("error resolving request: {err:?}");
-                        continue;
-                    }
-                };
-
-                info!("new request: {:#?}", req);
-
-                if req.method() == Method::CONNECT
-                    && req
-                        .extensions()
-                        .get::<Protocol>()
-                        == Some(&Protocol::WEB_TRANSPORT)
-                {
-                    tracing::info!("Peer wants WebTransport");
-                    let session = WebTransportSession::accept(req, stream, conn).await?;
-                    tracing::info!("WebTransport session established");
-
-                    handle_session_and_echo_all_inbound_messages(session).await?;
-                    return Ok(());
-                } else {
-                    tracing::info!(?req, "Received non-WebTransport request");
-                }
-            }
-            Ok(None) => break, // connection closed
-            Err(err) => {
-                error!("Connection errored: {err}");
-                break;
-            }
+pub async fn handle_h3(
+    mut h3_conn: H3ServerConn<H3QuinnConn, Bytes>,
+) -> Result<(), anyhow::Error> {
+    info!("Connection");
+    while let Some(resolver) = h3_conn.accept().await? {
+        let (req, mut stream) = resolver.resolve_request().await?;
+        info!("REQ: {:#?}", req);
+        if req.method() == http::Method::CONNECT {
+            let response = Response::builder()
+                .status(StatusCode::OK)
+                .header("sec-webtransport-http3-draft02", "1")
+                .version(http::Version::HTTP_3)
+                .body(())?;
+            info!("RES: {:#?}", response);
+            stream.send_response(response).await?;
+            stream.finish().await?;
+            println!("✅ Handshake complete")
+        } else {
+            let response = Response::builder()
+                .status(StatusCode::BAD_REQUEST)
+                .body(())?;
+            stream.send_response(response).await?;
+            stream.finish().await?;
+            println!("❌ Non-CONNECT request rejected");
         }
     }
-
-    Ok(())
-}
-
-macro_rules! log_result {
-    ($expr:expr) => {
-        if let Err(err) = $expr {
-            tracing::error!("{err:?}");
-        }
-    };
-}
-
-async fn echo_stream<T, R>(send: T, recv: R) -> Result<()>
-where
-    T: AsyncWrite,
-    R: AsyncRead,
-{
-    pin!(send);
-    pin!(recv);
-
-    let mut buf = Vec::new();
-    recv.read_to_end(&mut buf).await?;
-    let message = Bytes::from(buf);
-    send_chunked(send, message).await?;
-    Ok(())
-}
-
-async fn send_chunked(mut send: impl AsyncWrite + Unpin, data: Bytes) -> Result<()> {
-    for chunk in data.chunks(4) {
-        tokio::time::sleep(Duration::from_millis(100)).await;
-        tracing::info!("Sending {chunk:?}");
-        send.write_all(chunk).await?;
-    }
-    Ok(())
-}
-
-async fn open_bidi_test<S>(mut stream: S) -> Result<()>
-where
-    S: Unpin + AsyncRead + AsyncWrite,
-{
-    stream
-        .write_all(b"Hello from server bidi stream")
-        .await
-        .context("Failed to respond")?;
-
-    let mut resp = Vec::new();
-    stream.shutdown().await?;
-    stream.read_to_end(&mut resp).await?;
-    tracing::info!("Client response: {resp:?}");
-    Ok(())
-}
-
-async fn handle_session_and_echo_all_inbound_messages(
-    session: WebTransportSession<h3_quinn::Connection, Bytes>,
-) -> Result<()> {
-    let session_id = session.session_id();
-
-    let stream = session.open_bi(session_id).await?;
-    tokio::spawn(async move { log_result!(open_bidi_test(stream).await) });
-
-    let mut datagram_reader = session.datagram_reader();
-    let mut datagram_sender = session.datagram_sender();
-
-    loop {
-        tokio::select! {
-            datagram = datagram_reader.read_datagram() => {
-                let datagram = match datagram {
-                    Ok(d) => d,
-                    Err(err) => {
-                        tracing::error!("Datagram read error: {err:?}");
-                        break;
-                    }
-                };
-                tracing::info!("Received datagram: {datagram:?}");
-                let payload = datagram.into_payload();
-                datagram_sender.send_datagram(payload)?;
-            }
-
-            uni_stream = session.accept_uni() => {
-                let (id, stream) = uni_stream?.unwrap();
-                let send = session.open_uni(id).await?;
-                tokio::spawn(async move { log_result!(echo_stream(send, stream).await); });
-            }
-
-            bi_stream = session.accept_bi() => {
-                if let Some(server::AcceptedBi::BidiStream(_, stream)) = bi_stream? {
-                    let (send, recv) = quic::BidiStream::split(stream);
-                    tokio::spawn(async move { log_result!(echo_stream(send, recv).await); });
-                }
-            }
-
-            else => break,
-        }
-    }
-
-    tracing::info!("Session finished");
     Ok(())
 }

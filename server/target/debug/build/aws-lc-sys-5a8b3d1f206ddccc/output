@@ -63,7 +63,7 @@ cargo:rerun-if-env-changed=WindowsSDKVersion
 WindowsSDKVersion = None
 cargo:rerun-if-env-changed=LIB
 LIB = None
-PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
+PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\mkcert;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
 cargo:rerun-if-env-changed=INCLUDE
 INCLUDE = None
 HOST = Some(x86_64-pc-windows-msvc)
@@ -102,7 +102,7 @@ cargo:rerun-if-env-changed=WindowsSDKVersion
 WindowsSDKVersion = None
 cargo:rerun-if-env-changed=LIB
 LIB = None
-PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
+PATH = Some(C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps;C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\dotnet\;C:\Program Files\Wolfram Research\WolframScript\;C:\xampp\php;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NASM;C:\Program Files\CMake\bin;C:\mkcert;C:\Users\senuk\.cargo\bin;C:\xampp\php;C:\Users\senuk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\senuk\AppData\Roaming\Composer\vendor\bin;C:\Users\senuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2023.2\bin;;C:\Users\senuk\AppData\Local\GitHubDesktop\bin;C:\Users\senuk\AppData\Roaming\npm;C:\Users\senuk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\senuk\.cargo\bin;C:\Program Files\OpenSSL-Win64\bin;;C:\Users\senuk\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
 cargo:rerun-if-env-changed=INCLUDE
 INCLUDE = None
 HOST = Some(x86_64-pc-windows-msvc)
@@ -175,18 +175,18 @@ Not searching for unused variables given on the command line.
 -- Looking for pthread_create in pthread
 -- Looking for pthread_create in pthread - not found
 -- Found Threads: TRUE
--- Configuring done (4.3s)
--- Generating done (0.2s)
+-- Configuring done (12.2s)
+-- Generating done (0.8s)
 -- Build files have been written to: C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-5a8b3d1f206ddccc/out/build
 running: "cmake" "--build" "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-5a8b3d1f206ddccc\\out\\build" "--target" "install" "--config" "Debug" "--parallel" "16"
 MSBuild version 17.14.10+8b8e13593 for .NET Framework
 
   1>Checking Build System
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/CMakeLists.txt
-  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/fipsmodule/CMakeLists.txt
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/CMakeLists.txt
-  Assembling aesni-gcm-avx512.asm
+  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/fipsmodule/CMakeLists.txt
   Assembling chacha-x86_64.asm
+  Assembling aesni-gcm-avx512.asm
   Assembling aesni-gcm-x86_64.asm
   Assembling chacha20_poly1305_x86_64.asm
   Assembling aesni-xts-avx512.asm
@@ -195,68 +195,67 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   Assembling aesni-sha1-x86_64.asm
   Assembling aesni-sha256-x86_64.asm
   Assembling ghash-ssse3-x86_64.asm
-  Assembling ghash-x86_64.asm
   Assembling trampoline-x86_64.asm
+  Assembling ghash-x86_64.asm
   Assembling md5-x86_64.asm
-  Assembling p256-x86_64-asm.asm
   a_bitstr.c
+  Assembling p256-x86_64-asm.asm
   a_bool.c
-  Assembling p256_beeu-x86_64-asm.asm
   a_d2i_fp.c
   a_dup.c
   a_gentm.c
-  Assembling rdrand-x86_64.asm
+  Assembling p256_beeu-x86_64-asm.asm
   a_i2d_fp.c
   a_int.c
-  Assembling rsaz-avx2.asm
   a_mbstr.c
+  Assembling rdrand-x86_64.asm
   a_object.c
-  Assembling rsaz-2k-avx512.asm
   a_octet.c
   a_strex.c
-  Assembling rsaz-3k-avx512.asm
+  Assembling rsaz-avx2.asm
   a_strnid.c
-  Assembling rsaz-4k-avx512.asm
+  Assembling rsaz-2k-avx512.asm
   a_time.c
   a_type.c
-  Assembling sha1-x86_64.asm
+  Assembling rsaz-3k-avx512.asm
   a_utctm.c
   a_utf8.c
-  Assembling sha256-x86_64.asm
+  Assembling rsaz-4k-avx512.asm
   asn1_lib.c
-  Assembling sha512-x86_64.asm
   asn1_par.c
+  Assembling sha1-x86_64.asm
   asn_pack.c
   f_int.c
   Generating Code...
-  Assembling vpaes-x86_64.asm
   Compiling...
   f_string.c
   tasn_dec.c
-  Assembling x86_64-mont5.asm
+  Assembling sha256-x86_64.asm
   tasn_enc.c
+  Assembling sha512-x86_64.asm
   tasn_fre.c
-  Assembling x86_64-mont.asm
   tasn_new.c
+  Assembling vpaes-x86_64.asm
   tasn_typ.c
   tasn_utl.c
-  bcm.c
+  Assembling x86_64-mont5.asm
   posix_time.c
   base64.c
+  Assembling x86_64-mont.asm
   bio.c
   bio_addr.c
+  bcm.c
   bio_mem.c
-  fips_shared_support.c
-  cpucap.c
-  Generating Code...
   connect.c
   dgram.c
   errno.c
   fd.c
+  fips_shared_support.c
   file.c
+  cpucap.c
+  Generating Code...
   hexdump.c
   pair.c
-  fipsmodule.vcxproj -> C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\build\aws-lc-sys-5a8b3d1f206ddccc\out\build\aws-lc\crypto\fipsmodule\fipsmodule.dir\Debug\fipsmodule.lib
   printf.c
   Generating Code...
   Compiling...
@@ -264,6 +263,7 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   socket_helper.c
   blake2.c
   bn_asn1.c
+  fipsmodule.vcxproj -> C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\build\aws-lc-sys-5a8b3d1f206ddccc\out\build\aws-lc\crypto\fipsmodule\fipsmodule.dir\Debug\fipsmodule.lib
   convert.c
   buf.c
   asn1_compat.c
