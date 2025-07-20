@@ -1,6 +1,7 @@
 use std::{fs, net::SocketAddr, sync::Arc};
 use h3::server::Connection as H3ServerConn;
 use h3_quinn::Connection as H3QuinnConn;
+use h3_webtransport::server::WebTransportSession;
 use quinn::{Endpoint, ServerConfig};
 use tracing::{error, info};
 use tracing_subscriber;
@@ -8,7 +9,7 @@ use bytes::{Bytes};
 use rustls_pki_types::{CertificateDer, PrivateKeyDer, PrivatePkcs8KeyDer};
 use quinn::crypto::rustls::HandshakeData;
 use quinn::crypto::rustls::QuicServerConfig;
-use http::{Request, Response, StatusCode};
+use http::{Response, StatusCode};
 use h3::server as H3Server;
 
 pub const ALPN_QUIC_HTTP: &[&[u8]] = &[b"h3", b"h3-29"];
@@ -45,8 +46,11 @@ async fn main() -> anyhow::Result<()> {
 
 
     let mut server_config = ServerConfig::with_crypto(Arc::new(QuicServerConfig::try_from(server_crypto)?));
-    let transport_config = Arc::get_mut(&mut server_config.transport).unwrap();
-    transport_config.max_concurrent_uni_streams(100_u8.into());
+    let transport_config = quinn::TransportConfig::default();
+    server_config.transport = Arc::new(transport_config);
+
+    // let transport_config = Arc::get_mut(&mut server_config.transport).unwrap();
+    // transport_config.max_concurrent_uni_streams(100_u8.into());
 
     // Bind and start server
     let addr: SocketAddr = "0.0.0.0:8443".parse()?;
@@ -81,7 +85,7 @@ async fn main() -> anyhow::Result<()> {
                         .enable_datagram(true)
                         .max_webtransport_sessions(100);
 
-                    let mut h3_conn = builder.build(h3_quinn_conn).await.unwrap();
+                    let h3_conn = builder.build(h3_quinn_conn).await.unwrap();
 
 
                     tokio::spawn(handle_h3(h3_conn));
@@ -100,23 +104,40 @@ pub async fn handle_h3(
     while let Some(resolver) = h3_conn.accept().await? {
         let (req, mut stream) = resolver.resolve_request().await?;
         info!("REQ: {:#?}", req);
+
         if req.method() == http::Method::CONNECT {
             let response = Response::builder()
                 .status(StatusCode::OK)
-                .header("sec-webtransport-http3-draft02", "1")
+                .header("sec-webtransport-http3-draft", "draft02")
                 .version(http::Version::HTTP_3)
                 .body(())?;
+
             info!("RES: {:#?}", response);
             stream.send_response(response).await?;
             stream.finish().await?;
-            println!("✅ Handshake complete")
+            println!("✅ Handshake response sent");
+
+            // // 🔥 This is the missing piece!
+            let session = WebTransportSession::accept(req, stream, h3_conn).await?;
+            // println!("WebTransport session established");
+
+            // // Send test datagram to confirm
+            // session.send_datagram(Bytes::from_static(b"hello from server"))?;
+            // println!("Sent datagram");
+
+            // // Optionally receive datagram
+            // tokio::spawn(async move {
+            //     while let Some(Ok(data)) = session.read_datagram().await {
+            //         println!("Got datagram from client: {:?}", data);
+            //     }
+            // });
         } else {
             let response = Response::builder()
                 .status(StatusCode::BAD_REQUEST)
                 .body(())?;
             stream.send_response(response).await?;
             stream.finish().await?;
-            println!("❌ Non-CONNECT request rejected");
+            println!("Non-CONNECT request rejected");
         }
     }
     Ok(())

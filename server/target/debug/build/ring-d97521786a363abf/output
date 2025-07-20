@@ -62,9 +62,9 @@ p256.c
 limbs.c
 mem.c
 poly1305.c
-curve25519_64_adx.c
 crypto.c
 cpu_intel.c
+curve25519_64_adx.c
 p256-nistz.c
 exit code: 0
 exit code: 0

@@ -1,172 +1,158 @@
-// Adds an entry to the event log on the page, optionally applying a specified
-// CSS class.
+let currentTransport = null;
+let streamNumber = 1;
+let currentTransportDatagramWriter = null;
 
-let currentTransport, streamNumber, currentTransportDatagramWriter;
-
-// "Connect" button handler.
+// Connect button handler
 async function connect() {
   const url = document.getElementById('url').value;
+
   try {
-    var transport = new WebTransport(url);
-    addToEventLog('Initiating connection...');
+    currentTransport = new WebTransport(url);
+    addToEventLog('🔌 Initiating connection...');
   } catch (e) {
-    addToEventLog('Failed to create connection object. ' + e, 'error');
+    addToEventLog('❌ Failed to create connection object. ' + e, 'error');
     return;
   }
 
   try {
-    await transport.ready;
-    addToEventLog('Connection ready.');
+    await currentTransport.ready;
+    addToEventLog('✅ Connection ready.');
 
-    // 💡 This is required to send the CONNECT request
-    let stream = await transport.createUnidirectionalStream();
+    // Required: Send a unidirectional stream to complete CONNECT
+    const stream = await currentTransport.createUnidirectionalStream();
     await stream.getWriter().close();
 
-  } catch (e) {
-    addToEventLog('Connection failed. ' + e, 'error');
-    return;
-  }
+    currentTransport.closed
+      .then(() => addToEventLog('🔒 Connection closed normally.'))
+      .catch((e) => addToEventLog('❗ Connection closed abruptly: ' + e, 'error'));
 
-  transport.closed
-      .then(() => {
-        addToEventLog('Connection closed normally.');
-      })
-      .catch(() => {
-        addToEventLog('Connection closed abruptly.', 'error');
-      });
+    currentTransportDatagramWriter = currentTransport.datagrams.writable.getWriter();
+    addToEventLog('📤 Datagram writer ready.');
 
-  currentTransport = transport;
-  streamNumber = 1;
-  try {
-    currentTransportDatagramWriter = transport.datagrams.writable.getWriter();
-    addToEventLog('Datagram writer ready.');
+    // Start receiving
+    readDatagrams(currentTransport);
+    acceptUnidirectionalStreams(currentTransport);
+
+    document.forms.sending.elements.send.disabled = false;
+    document.getElementById('connect').disabled = true;
+
   } catch (e) {
-    addToEventLog('Sending datagrams not supported: ' + e, 'error');
-    return;
+    addToEventLog('❌ Connection failed. ' + e, 'error');
   }
-  readDatagrams(transport);
-  acceptUnidirectionalStreams(transport);
-  document.forms.sending.elements.send.disabled = false;
-  document.getElementById('connect').disabled = true;
 }
 
-// "Send data" button handler.
+// Send data handler
 async function sendData() {
-  let form = document.forms.sending.elements;
-  let encoder = new TextEncoder('utf-8');
-  let rawData = sending.data.value;
-  let data = encoder.encode(rawData);
-  let transport = currentTransport;
+  const form = document.forms.sending.elements;
+  const encoder = new TextEncoder();
+  const rawData = form.data.value;
+  const data = encoder.encode(rawData);
+
   try {
     switch (form.sendtype.value) {
       case 'datagram':
         await currentTransportDatagramWriter.write(data);
-        addToEventLog('Sent datagram: ' + rawData);
+        addToEventLog('📨 Sent datagram: ' + rawData);
         break;
+
       case 'unidi': {
-        let stream = await transport.createUnidirectionalStream();
-        let writer = stream.getWriter();
+        const stream = await currentTransport.createUnidirectionalStream();
+        const writer = stream.getWriter();
         await writer.write(data);
         await writer.close();
-        addToEventLog('Sent a unidirectional stream with data: ' + rawData);
+        addToEventLog('📨 Sent unidirectional stream with data: ' + rawData);
         break;
       }
+
       case 'bidi': {
-        let stream = await transport.createBidirectionalStream();
-        let number = streamNumber++;
+        const stream = await currentTransport.createBidirectionalStream();
+        const number = streamNumber++;
         readFromIncomingStream(stream, number);
 
-        let writer = stream.writable.getWriter();
+        const writer = stream.writable.getWriter();
         await writer.write(data);
         await writer.close();
-        addToEventLog(
-            'Opened bidirectional stream #' + number +
-            ' with data: ' + rawData);
+        addToEventLog('📨 Sent bidirectional stream #' + number + ' with data: ' + rawData);
         break;
       }
     }
   } catch (e) {
-    addToEventLog('Error while sending data: ' + e, 'error');
+    addToEventLog('❌ Error while sending data: ' + e, 'error');
   }
 }
 
-// Reads datagrams from |transport| into the event log until EOF is reached.
+// Reads incoming datagrams
 async function readDatagrams(transport) {
   try {
-    var reader = transport.datagrams.readable.getReader();
-    addToEventLog('Datagram reader ready.');
-  } catch (e) {
-    addToEventLog('Receiving datagrams not supported: ' + e, 'error');
-    return;
-  }
-  let decoder = new TextDecoder('utf-8');
-  try {
+    const reader = transport.datagrams.readable.getReader();
+    addToEventLog('📥 Datagram reader ready.');
+
+    const decoder = new TextDecoder('utf-8');
     while (true) {
       const { value, done } = await reader.read();
       if (done) {
-        addToEventLog('Done reading datagrams!');
-        return;
+        addToEventLog('✅ Done reading datagrams.');
+        break;
       }
-      let data = decoder.decode(value);
-      addToEventLog('Datagram received: ' + data);
+      const data = decoder.decode(value);
+      addToEventLog('📥 Datagram received: ' + data);
     }
   } catch (e) {
-    addToEventLog('Error while reading datagrams: ' + e, 'error');
+    addToEventLog('❌ Error while reading datagrams: ' + e, 'error');
   }
 }
 
+// Accept unidirectional streams
 async function acceptUnidirectionalStreams(transport) {
-  let reader = transport.incomingUnidirectionalStreams.getReader();
+  const reader = transport.incomingUnidirectionalStreams.getReader();
+
   try {
     while (true) {
       const { value, done } = await reader.read();
       if (done) {
-        addToEventLog('Done accepting unidirectional streams!');
-        return;
+        addToEventLog('✅ Done accepting unidirectional streams.');
+        break;
       }
-      let stream = value;
-      let number = streamNumber++;
-      addToEventLog('New incoming unidirectional stream #' + number);
+      const stream = value;
+      const number = streamNumber++;
+      addToEventLog('📥 Incoming unidirectional stream #' + number);
       readFromIncomingStream(stream, number);
     }
   } catch (e) {
-    addToEventLog('Error while accepting streams: ' + e, 'error');
+    addToEventLog('❌ Error while accepting streams: ' + e, 'error');
   }
 }
 
+// Reads from an incoming stream
 async function readFromIncomingStream(stream, number) {
-  let decoder = new TextDecoderStream('utf-8');
-  let reader = stream.pipeThrough(decoder).getReader();
+  const decoder = new TextDecoderStream();
+  const reader = stream.pipeThrough(decoder).getReader();
+
   try {
     while (true) {
       const { value, done } = await reader.read();
       if (done) {
-        addToEventLog('Stream #' + number + ' closed');
-        return;
+        addToEventLog('✅ Stream #' + number + ' closed.');
+        break;
       }
-      let data = value;
-      addToEventLog('Received data on stream #' + number + ': ' + data);
+      addToEventLog(`📥 Received on stream #${number}: ${value}`);
     }
   } catch (e) {
-    addToEventLog(
-        'Error while reading from stream #' + number + ': ' + e, 'error');
-    addToEventLog('    ' + e.message);
+    addToEventLog(`❌ Error on stream #${number}: ${e}`, 'error');
   }
 }
 
+// Adds a message to the event log
 function addToEventLog(text, severity = 'info') {
-  let log = document.getElementById('event-log');
-  let mostRecentEntry = log.lastElementChild;
-  let entry = document.createElement('li');
+  const log = document.getElementById('event-log');
+  const mostRecentEntry = log.lastElementChild;
+  const entry = document.createElement('li');
   entry.innerText = text;
   entry.className = 'log-' + severity;
   log.appendChild(entry);
 
-  // If the most recent entry in the log was visible, scroll the log to the
-  // newly added element.
-  if (mostRecentEntry != null &&
-      mostRecentEntry.getBoundingClientRect().top <
-          log.getBoundingClientRect().bottom) {
+  if (mostRecentEntry &&
+      mostRecentEntry.getBoundingClientRect().top < log.getBoundingClientRect().bottom) {
     entry.scrollIntoView();
   }
 }

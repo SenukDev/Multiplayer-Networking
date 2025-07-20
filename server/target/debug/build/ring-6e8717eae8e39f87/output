@@ -62,19 +62,19 @@ p256.c
 limbs.c
 mem.c
 poly1305.c
-crypto.c
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
-exit code: 0
 cpu_intel.c
+crypto.c
 curve25519_64_adx.c
 p256-nistz.c
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
 exit code: 0
 exit code: 0
 exit code: 0

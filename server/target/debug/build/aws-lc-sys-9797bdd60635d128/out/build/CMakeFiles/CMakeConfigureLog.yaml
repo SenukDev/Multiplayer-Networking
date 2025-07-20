@@ -118,7 +118,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.10+8b8e13593 for .NET Framework
-      Build started 18/07/2025 3:04:52 PM.
+      Build started 20/07/2025 11:22:08 AM.
       
       Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -147,7 +147,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.52
+      Time Elapsed 00:00:00.97
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -1165,8 +1165,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-9enbm6"
-      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-9enbm6"
+      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-gglrh4"
+      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-gglrh4"
     cmakeVariables:
       CMAKE_C_FLAGS: " -nologo -MD -Brepro"
       CMAKE_C_FLAGS_DEBUG: " -nologo -MD -Brepro"
@@ -1175,37 +1175,37 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-9enbm6'
+        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-gglrh4'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_351c0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ca004.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.10+8b8e13593 for .NET Framework
-        Build started 18/07/2025 3:04:53 PM.
+        Build started 20/07/2025 11:22:09 AM.
         
-        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9enbm6\\cmTC_351c0.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gglrh4\\cmTC_ca004.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_351c0.dir\\Debug\\".
+          Creating directory "cmTC_ca004.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9enbm6\\Debug\\".
-          Creating directory "cmTC_351c0.dir\\Debug\\cmTC_351c0.tlog\\".
+          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gglrh4\\Debug\\".
+          Creating directory "cmTC_ca004.dir\\Debug\\cmTC_ca004.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_351c0.dir\\Debug\\cmTC_351c0.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_351c0.dir\\Debug\\cmTC_351c0.tlog\\unsuccessfulbuild".
+          Creating "cmTC_ca004.dir\\Debug\\cmTC_ca004.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ca004.dir\\Debug\\cmTC_ca004.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /nologo /W1 /WX- /diagnostics:column /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /MD /GS /fp:precise /Fo"cmTC_351c0.dir\\Debug\\\\" /Fd"cmTC_351c0.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  -Brepro -Brepro "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /nologo /W1 /WX- /diagnostics:column /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /MD /GS /fp:precise /Fo"cmTC_ca004.dir\\Debug\\\\" /Fd"cmTC_ca004.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  -Brepro -Brepro "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9enbm6\\Debug\\cmTC_351c0.exe" /INCREMENTAL /ILK:"cmTC_351c0.dir\\Debug\\cmTC_351c0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-9enbm6/Debug/cmTC_351c0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-9enbm6/Debug/cmTC_351c0.lib" /MACHINE:X64  /machine:x64 cmTC_351c0.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_351c0.vcxproj -> C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9enbm6\\Debug\\cmTC_351c0.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gglrh4\\Debug\\cmTC_ca004.exe" /INCREMENTAL /ILK:"cmTC_ca004.dir\\Debug\\cmTC_ca004.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-gglrh4/Debug/cmTC_ca004.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-gglrh4/Debug/cmTC_ca004.lib" /MACHINE:X64  /machine:x64 cmTC_ca004.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ca004.vcxproj -> C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gglrh4\\Debug\\cmTC_ca004.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_351c0.dir\\Debug\\cmTC_351c0.tlog\\unsuccessfulbuild".
-          Touching "cmTC_351c0.dir\\Debug\\cmTC_351c0.tlog\\cmTC_351c0.lastbuildstate".
-        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9enbm6\\cmTC_351c0.vcxproj" (default targets).
+          Deleting file "cmTC_ca004.dir\\Debug\\cmTC_ca004.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ca004.dir\\Debug\\cmTC_ca004.tlog\\cmTC_ca004.lastbuildstate".
+        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gglrh4\\cmTC_ca004.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.49
+        Time Elapsed 00:00:01.05
         
       exitCode: 0
   -
@@ -2130,8 +2130,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-zq1tb5"
-      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-zq1tb5"
+      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-4uk574"
+      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-4uk574"
     cmakeVariables:
       CMAKE_C_FLAGS: "-utf-8 -Wall -WX  -wd4061 -wd4100 -wd4127 -wd4146 -wd4200 -wd4204 -wd4221 -wd4242 -wd4244 -wd4267 -wd4371 -wd4388 -wd4296 -wd4350 -wd4365 -wd4389 -wd4464 -wd4510 -wd4512 -wd4514 -wd4548 -wd4610 -wd4623 -wd4625 -wd4626 -wd4628 -wd4668 -wd4706 -wd4710 -wd4711 -wd4800 -wd4820 -wd5026 -wd5027 -wd5045 -wd4255 -wd4152 -wd4295 -wd4701 -wd4505 -wd4702 -wd4191 -wd4996 -wd4746 -wd5264 -wd5266 -wd5267  -w44265"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -2140,40 +2140,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-zq1tb5'
+        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-4uk574'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fbfeb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_08203.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.10+8b8e13593 for .NET Framework
-        Build started 18/07/2025 3:04:54 PM.
+        Build started 20/07/2025 11:22:11 AM.
         
-        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\cmTC_fbfeb.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\cmTC_08203.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_fbfeb.dir\\Debug\\".
+          Creating directory "cmTC_08203.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\Debug\\".
-          Creating directory "cmTC_fbfeb.dir\\Debug\\cmTC_fbfeb.tlog\\".
+          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\Debug\\".
+          Creating directory "cmTC_08203.dir\\Debug\\cmTC_08203.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_fbfeb.dir\\Debug\\cmTC_fbfeb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_fbfeb.dir\\Debug\\cmTC_fbfeb.tlog\\unsuccessfulbuild".
+          Creating "cmTC_08203.dir\\Debug\\cmTC_08203.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_08203.dir\\Debug\\cmTC_08203.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_fbfeb.dir\\Debug\\\\" /Fd"cmTC_fbfeb.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\src.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_08203.dir\\Debug\\\\" /Fd"cmTC_08203.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35209 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_fbfeb.dir\\Debug\\\\" /Fd"cmTC_fbfeb.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\src.c"
+          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_08203.dir\\Debug\\\\" /Fd"cmTC_08203.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\src.c"
           src.c
-        C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\cmTC_fbfeb.vcxproj]
-        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\cmTC_fbfeb.vcxproj" (default targets) -- FAILED.
+        C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\cmTC_08203.vcxproj]
+        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\cmTC_08203.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\cmTC_fbfeb.vcxproj" (default target) (1) ->
+        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\cmTC_08203.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zq1tb5\\cmTC_fbfeb.vcxproj]
+          C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4uk574\\cmTC_08203.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.30
+        Time Elapsed 00:00:00.57
         
       exitCode: 1
   -
@@ -2186,8 +2186,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-b8yk2d"
-      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-b8yk2d"
+      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-iyj5z4"
+      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-iyj5z4"
     cmakeVariables:
       CMAKE_C_FLAGS: "-utf-8 -Wall -WX  -wd4061 -wd4100 -wd4127 -wd4146 -wd4200 -wd4204 -wd4221 -wd4242 -wd4244 -wd4267 -wd4371 -wd4388 -wd4296 -wd4350 -wd4365 -wd4389 -wd4464 -wd4510 -wd4512 -wd4514 -wd4548 -wd4610 -wd4623 -wd4625 -wd4626 -wd4628 -wd4668 -wd4706 -wd4710 -wd4711 -wd4800 -wd4820 -wd5026 -wd5027 -wd5045 -wd4255 -wd4152 -wd4295 -wd4701 -wd4505 -wd4702 -wd4191 -wd4996 -wd4746 -wd5264 -wd5266 -wd5267  -w44265"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -2196,42 +2196,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-b8yk2d'
+        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-iyj5z4'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_da354.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_99817.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.10+8b8e13593 for .NET Framework
-        Build started 18/07/2025 3:04:54 PM.
+        Build started 20/07/2025 11:22:12 AM.
         
-        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\cmTC_da354.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\cmTC_99817.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_da354.dir\\Debug\\".
+          Creating directory "cmTC_99817.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\Debug\\".
-          Creating directory "cmTC_da354.dir\\Debug\\cmTC_da354.tlog\\".
+          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\Debug\\".
+          Creating directory "cmTC_99817.dir\\Debug\\cmTC_99817.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_da354.dir\\Debug\\cmTC_da354.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_da354.dir\\Debug\\cmTC_da354.tlog\\unsuccessfulbuild".
+          Creating "cmTC_99817.dir\\Debug\\cmTC_99817.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_99817.dir\\Debug\\cmTC_99817.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_da354.dir\\Debug\\\\" /Fd"cmTC_da354.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_99817.dir\\Debug\\\\" /Fd"cmTC_99817.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35209 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_da354.dir\\Debug\\\\" /Fd"cmTC_da354.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\CheckFunctionExists.c"
+          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_99817.dir\\Debug\\\\" /Fd"cmTC_99817.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\Debug\\cmTC_da354.exe" /INCREMENTAL /ILK:"cmTC_da354.dir\\Debug\\cmTC_da354.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-b8yk2d/Debug/cmTC_da354.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-b8yk2d/Debug/cmTC_da354.lib" /MACHINE:X64  /machine:x64 cmTC_da354.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\cmTC_da354.vcxproj]
-        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\cmTC_da354.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\Debug\\cmTC_99817.exe" /INCREMENTAL /ILK:"cmTC_99817.dir\\Debug\\cmTC_99817.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-iyj5z4/Debug/cmTC_99817.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-iyj5z4/Debug/cmTC_99817.lib" /MACHINE:X64  /machine:x64 cmTC_99817.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\cmTC_99817.vcxproj]
+        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\cmTC_99817.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\cmTC_da354.vcxproj" (default target) (1) ->
+        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\cmTC_99817.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8yk2d\\cmTC_da354.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iyj5z4\\cmTC_99817.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.40
+        Time Elapsed 00:00:00.64
         
       exitCode: 1
   -
@@ -2244,8 +2244,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-02x8xm"
-      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-02x8xm"
+      source: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-rf3b8w"
+      binary: "C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-rf3b8w"
     cmakeVariables:
       CMAKE_C_FLAGS: "-utf-8 -Wall -WX  -wd4061 -wd4100 -wd4127 -wd4146 -wd4200 -wd4204 -wd4221 -wd4242 -wd4244 -wd4267 -wd4371 -wd4388 -wd4296 -wd4350 -wd4365 -wd4389 -wd4464 -wd4510 -wd4512 -wd4514 -wd4548 -wd4610 -wd4623 -wd4625 -wd4626 -wd4628 -wd4668 -wd4706 -wd4710 -wd4711 -wd4800 -wd4820 -wd5026 -wd5027 -wd5045 -wd4255 -wd4152 -wd4295 -wd4701 -wd4505 -wd4702 -wd4191 -wd4996 -wd4746 -wd5264 -wd5266 -wd5267  -w44265"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -2254,42 +2254,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-02x8xm'
+        Change Dir: 'C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-rf3b8w'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_aa7f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_df21c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.10+8b8e13593 for .NET Framework
-        Build started 18/07/2025 3:04:55 PM.
+        Build started 20/07/2025 11:22:13 AM.
         
-        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\cmTC_aa7f9.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\cmTC_df21c.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_aa7f9.dir\\Debug\\".
+          Creating directory "cmTC_df21c.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\Debug\\".
-          Creating directory "cmTC_aa7f9.dir\\Debug\\cmTC_aa7f9.tlog\\".
+          Creating directory "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\Debug\\".
+          Creating directory "cmTC_df21c.dir\\Debug\\cmTC_df21c.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_aa7f9.dir\\Debug\\cmTC_aa7f9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_aa7f9.dir\\Debug\\cmTC_aa7f9.tlog\\unsuccessfulbuild".
+          Creating "cmTC_df21c.dir\\Debug\\cmTC_df21c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_df21c.dir\\Debug\\cmTC_df21c.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_aa7f9.dir\\Debug\\\\" /Fd"cmTC_aa7f9.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_df21c.dir\\Debug\\\\" /Fd"cmTC_df21c.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35209 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_aa7f9.dir\\Debug\\\\" /Fd"cmTC_aa7f9.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\CheckFunctionExists.c"
+          cl /c /Zi /Wall /WX /diagnostics:column /Od /Ob0 /D _MBCS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_df21c.dir\\Debug\\\\" /Fd"cmTC_df21c.dir\\Debug\\vc143.pdb" /external:W4 /Gd /TC /wd4061 /wd4100 /wd4127 /wd4146 /wd4200 /wd4204 /wd4221 /wd4242 /wd4244 /wd4267 /wd4371 /wd4388 /wd4296 /wd4350 /wd4365 /wd4389 /wd4464 /wd4510 /wd4512 /wd4514 /wd4548 /wd4610 /wd4623 /wd4625 /wd4626 /wd4628 /wd4668 /wd4706 /wd4710 /wd4711 /wd4800 /wd4820 /wd5026 /wd5027 /wd5045 /wd4255 /wd4152 /wd4295 /wd4701 /wd4505 /wd4702 /wd4191 /wd4996 /wd4746 /wd5264 /wd5266 /wd5267 /errorReport:queue  -utf-8 -w44265 "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\Debug\\cmTC_aa7f9.exe" /INCREMENTAL /ILK:"cmTC_aa7f9.dir\\Debug\\cmTC_aa7f9.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-02x8xm/Debug/cmTC_aa7f9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-02x8xm/Debug/cmTC_aa7f9.lib" /MACHINE:X64  /machine:x64 cmTC_aa7f9.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\cmTC_aa7f9.vcxproj]
-        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\cmTC_aa7f9.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\Debug\\cmTC_df21c.exe" /INCREMENTAL /ILK:"cmTC_df21c.dir\\Debug\\cmTC_df21c.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-rf3b8w/Debug/cmTC_df21c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build/CMakeFiles/CMakeScratch/TryCompile-rf3b8w/Debug/cmTC_df21c.lib" /MACHINE:X64  /machine:x64 cmTC_df21c.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\cmTC_df21c.vcxproj]
+        Done Building Project "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\cmTC_df21c.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\cmTC_aa7f9.vcxproj" (default target) (1) ->
+        "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\cmTC_df21c.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-02x8xm\\cmTC_aa7f9.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rf3b8w\\cmTC_df21c.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.42
+        Time Elapsed 00:00:00.64
         
       exitCode: 1
 ...

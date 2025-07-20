@@ -175,18 +175,18 @@ Not searching for unused variables given on the command line.
 -- Looking for pthread_create in pthread
 -- Looking for pthread_create in pthread - not found
 -- Found Threads: TRUE
--- Configuring done (3.9s)
--- Generating done (0.2s)
+-- Configuring done (7.1s)
+-- Generating done (0.3s)
 -- Build files have been written to: C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-9797bdd60635d128/out/build
 running: "cmake" "--build" "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-9797bdd60635d128\\out\\build" "--target" "install" "--config" "Debug" "--parallel" "16"
 MSBuild version 17.14.10+8b8e13593 for .NET Framework
 
   1>Checking Build System
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/CMakeLists.txt
-  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/CMakeLists.txt
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/fipsmodule/CMakeLists.txt
-  Assembling chacha-x86_64.asm
+  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/CMakeLists.txt
   Assembling aesni-gcm-avx512.asm
+  Assembling chacha-x86_64.asm
   Assembling aesni-gcm-x86_64.asm
   Assembling chacha20_poly1305_x86_64.asm
   Assembling aesni-xts-avx512.asm
@@ -200,15 +200,15 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   Assembling md5-x86_64.asm
   Assembling p256-x86_64-asm.asm
   a_bitstr.c
-  a_bool.c
   Assembling p256_beeu-x86_64-asm.asm
+  a_bool.c
   a_d2i_fp.c
   a_dup.c
   a_gentm.c
   Assembling rdrand-x86_64.asm
   a_i2d_fp.c
-  a_int.c
   Assembling rsaz-avx2.asm
+  a_int.c
   a_mbstr.c
   Assembling rsaz-2k-avx512.asm
   a_object.c
@@ -221,8 +221,8 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   a_type.c
   Assembling sha1-x86_64.asm
   a_utctm.c
-  Assembling sha256-x86_64.asm
   a_utf8.c
+  Assembling sha256-x86_64.asm
   asn1_lib.c
   Assembling sha512-x86_64.asm
   asn1_par.c
@@ -233,22 +233,22 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   Compiling...
   f_string.c
   tasn_dec.c
-  Assembling x86_64-mont5.asm
   tasn_enc.c
+  Assembling x86_64-mont5.asm
   tasn_fre.c
   Assembling x86_64-mont.asm
   tasn_new.c
   tasn_typ.c
-  tasn_utl.c
   bcm.c
+  tasn_utl.c
   posix_time.c
   base64.c
   bio.c
   bio_addr.c
   fips_shared_support.c
   cpucap.c
-  bio_mem.c
   Generating Code...
+  bio_mem.c
   connect.c
   dgram.c
   errno.c

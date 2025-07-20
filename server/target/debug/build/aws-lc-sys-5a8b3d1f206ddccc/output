@@ -175,8 +175,8 @@ Not searching for unused variables given on the command line.
 -- Looking for pthread_create in pthread
 -- Looking for pthread_create in pthread - not found
 -- Found Threads: TRUE
--- Configuring done (12.2s)
--- Generating done (0.8s)
+-- Configuring done (8.0s)
+-- Generating done (0.3s)
 -- Build files have been written to: C:/Users/senuk/Desktop/Multiplayer-Networking/server/target/debug/build/aws-lc-sys-5a8b3d1f206ddccc/out/build
 running: "cmake" "--build" "C:\\Users\\senuk\\Desktop\\Multiplayer-Networking\\server\\target\\debug\\build\\aws-lc-sys-5a8b3d1f206ddccc\\out\\build" "--target" "install" "--config" "Debug" "--parallel" "16"
 MSBuild version 17.14.10+8b8e13593 for .NET Framework
@@ -184,78 +184,79 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   1>Checking Build System
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/CMakeLists.txt
   Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/CMakeLists.txt
-  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/fipsmodule/CMakeLists.txt
   Assembling chacha-x86_64.asm
+  Building Custom Rule C:/Users/senuk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.30.0/aws-lc/crypto/fipsmodule/CMakeLists.txt
   Assembling aesni-gcm-avx512.asm
-  Assembling aesni-gcm-x86_64.asm
   Assembling chacha20_poly1305_x86_64.asm
+  Assembling aesni-gcm-x86_64.asm
   Assembling aesni-xts-avx512.asm
   Assembling aes128gcmsiv-x86_64.asm
   Assembling aesni-x86_64.asm
   Assembling aesni-sha1-x86_64.asm
   Assembling aesni-sha256-x86_64.asm
   Assembling ghash-ssse3-x86_64.asm
-  Assembling trampoline-x86_64.asm
   Assembling ghash-x86_64.asm
+  Assembling trampoline-x86_64.asm
   Assembling md5-x86_64.asm
-  a_bitstr.c
   Assembling p256-x86_64-asm.asm
+  a_bitstr.c
+  Assembling p256_beeu-x86_64-asm.asm
   a_bool.c
   a_d2i_fp.c
   a_dup.c
   a_gentm.c
-  Assembling p256_beeu-x86_64-asm.asm
+  Assembling rdrand-x86_64.asm
   a_i2d_fp.c
   a_int.c
+  Assembling rsaz-avx2.asm
   a_mbstr.c
-  Assembling rdrand-x86_64.asm
+  Assembling rsaz-2k-avx512.asm
   a_object.c
   a_octet.c
   a_strex.c
-  Assembling rsaz-avx2.asm
+  Assembling rsaz-3k-avx512.asm
   a_strnid.c
-  Assembling rsaz-2k-avx512.asm
+  Assembling rsaz-4k-avx512.asm
   a_time.c
   a_type.c
-  Assembling rsaz-3k-avx512.asm
+  Assembling sha1-x86_64.asm
   a_utctm.c
   a_utf8.c
-  Assembling rsaz-4k-avx512.asm
+  Assembling sha256-x86_64.asm
   asn1_lib.c
   asn1_par.c
-  Assembling sha1-x86_64.asm
+  Assembling sha512-x86_64.asm
   asn_pack.c
   f_int.c
   Generating Code...
   Compiling...
   f_string.c
+  Assembling vpaes-x86_64.asm
   tasn_dec.c
-  Assembling sha256-x86_64.asm
   tasn_enc.c
-  Assembling sha512-x86_64.asm
+  Assembling x86_64-mont5.asm
   tasn_fre.c
   tasn_new.c
-  Assembling vpaes-x86_64.asm
+  Assembling x86_64-mont.asm
   tasn_typ.c
   tasn_utl.c
-  Assembling x86_64-mont5.asm
   posix_time.c
+  bcm.c
   base64.c
-  Assembling x86_64-mont.asm
   bio.c
   bio_addr.c
-  bcm.c
   bio_mem.c
   connect.c
+  fips_shared_support.c
+  cpucap.c
+  Generating Code...
   dgram.c
   errno.c
   fd.c
-  fips_shared_support.c
   file.c
-  cpucap.c
-  Generating Code...
   hexdump.c
   pair.c
+  fipsmodule.vcxproj -> C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\build\aws-lc-sys-5a8b3d1f206ddccc\out\build\aws-lc\crypto\fipsmodule\fipsmodule.dir\Debug\fipsmodule.lib
   printf.c
   Generating Code...
   Compiling...
@@ -263,7 +264,6 @@ MSBuild version 17.14.10+8b8e13593 for .NET Framework
   socket_helper.c
   blake2.c
   bn_asn1.c
-  fipsmodule.vcxproj -> C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\build\aws-lc-sys-5a8b3d1f206ddccc\out\build\aws-lc\crypto\fipsmodule\fipsmodule.dir\Debug\fipsmodule.lib
   convert.c
   buf.c
   asn1_compat.c
