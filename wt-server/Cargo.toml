@@ -1,0 +1,12 @@
+[package]
+name = "wt-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wtransport = "0.6.1"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter", "fmt"] }
+tokio = { version = "1.46.0", features = ["rt-multi-thread", "macros"] }
+anyhow = "1.0.98"
+

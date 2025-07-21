@@ -1,1 +1,0 @@
-C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\build\aws-lc-sys-9797bdd60635d128\out\build\aws-lc\crypto\fipsmodule\fipsmodule.dir\Debug\fipsmodule.lib

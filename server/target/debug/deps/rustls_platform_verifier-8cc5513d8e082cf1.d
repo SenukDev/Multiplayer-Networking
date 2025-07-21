@@ -1,8 +1,0 @@
-C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps\rustls_platform_verifier-8cc5513d8e082cf1.d: C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\lib.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\mod.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\windows.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\../README.md
-
-C:\Users\senuk\Desktop\Multiplayer-Networking\server\target\debug\deps\librustls_platform_verifier-8cc5513d8e082cf1.rmeta: C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\lib.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\mod.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\windows.rs C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\../README.md
-
-C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\lib.rs:
-C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\mod.rs:
-C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\verification\windows.rs:
-C:\Users\senuk\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.5.3\src\../README.md:
