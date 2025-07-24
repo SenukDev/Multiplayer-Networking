@@ -45,18 +45,23 @@ pub async fn run_server(
             // Accept new incoming session
             incoming_session = server.accept() => {
                 let connection_id = Uuid::new_v4();
-                tokio::spawn(handle_connection(incoming_session, connections.clone(), connection_id).instrument(info_span!("Connection", %connection_id)));
+                tokio::spawn(handle_connection(
+                    incoming_session,
+                    connections.clone(),
+                    connection_id,
+                    to_world.clone(),
+                ).instrument(info_span!("Connection", %connection_id)));
             }
 
             // // Process messages from the world
             // Some(msg) = from_world.recv() => {
             //     match msg {
-            //         WorldToServer::SendToClient { session_id, message } => {
-            //             println!("Send to client {}: {}", session_id, message);
+            //         WorldToServer::SendToClient { connection_id, message } => {
+            //             println!("Send to client {}: {}", connection_id, message);
             //             // TODO: lookup session and send the message
             //         }
-            //         WorldToServer::DisconnectClient { session_id } => {
-            //             println!("Disconnecting client {}", session_id);
+            //         WorldToServer::DisconnectClient { connection_id } => {
+            //             println!("Disconnecting client {}", connection_id);
             //             // TODO: remove session from session map
             //         }
             //     }
@@ -71,36 +76,36 @@ pub async fn run_server(
 }
 
 
-async fn handle_connection(incoming_session: IncomingSession, connections: ConnectionMap, connection_id: ConnectionId) {
-    let result = handle_connection_impl(incoming_session, connections, connection_id).await;
+async fn handle_connection(
+    incoming_session: IncomingSession,
+    connections: ConnectionMap,
+    connection_id: ConnectionId,
+    to_world: UnboundedSender<ServerToWorld>,
+) {
+    let result = handle_connection_impl(incoming_session, connections, connection_id, to_world).await;
     error!("{:?}", result);
 }
 
-async fn handle_connection_impl(incoming_session: IncomingSession, connections: ConnectionMap, connection_id: ConnectionId) -> Result<()> {
+async fn handle_connection_impl(
+    incoming_session: IncomingSession,
+    connections: ConnectionMap,
+    connection_id: ConnectionId,
+    to_world: UnboundedSender<ServerToWorld>,
+) -> Result<()> {
     let mut buffer = vec![0; 65536].into_boxed_slice();
 
-    info!("Waiting for session request...");
-
     let session_request = incoming_session.await?;
-
-    info!(
-        "New session: Authority: '{}', Path: '{}'",
-        session_request.authority(),
-        session_request.path()
-    );
 
     let connection = session_request.accept().await?;
 
     connections.insert(connection_id, connection.clone());
+    to_world.send(ServerToWorld::PlayerJoined { connection_id })?;
 
-    info!("---------------");
     info!("Connection Map");
     for entry in connections.iter() {
         let id = entry.key();
         info!("Connection ID: {}", id);
     }
-
-    info!("Waiting for data from client...");
 
     loop {
         tokio::select! {
@@ -136,12 +141,13 @@ async fn handle_connection_impl(incoming_session: IncomingSession, connections: 
                 stream.write_all(b"ACK").await?;
             }
             dgram = connection.receive_datagram() => {
-                // let dgram = dgram?;
-                // let str_data = std::str::from_utf8(&dgram)?;
+                let dgram = dgram?;
+                let str_data = std::str::from_utf8(&dgram)?;
 
-                // info!("Received (dgram) '{str_data}' from client");
-
-                // connection.send_datagram(b"ACK")?;
+                info!("Received (dgram) '{str_data}' from client");
+                to_world.send(ServerToWorld::PlayerInput { connection_id: connection_id, input: str_data.to_string()})?;
+                
+                connection.send_datagram(b"ACK")?;
             }
         }
     }
