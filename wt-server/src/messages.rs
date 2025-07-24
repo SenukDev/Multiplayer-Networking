@@ -8,6 +8,6 @@ pub enum ServerToWorld {
 
 #[derive(Debug)]
 pub enum WorldToServer {
-    SendToClient { connection_id: Uuid, message: String },
-    DisconnectClient { connection_id: Uuid },
+    SendTick { receiver_connection_id: Uuid, tick: u64 },
+    CreatePlayer { receiver_connection_id: Uuid, connection_id: Uuid, x: f32, y: f32}
 }

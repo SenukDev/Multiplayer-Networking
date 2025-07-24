@@ -3,7 +3,9 @@ use tokio::sync::mpsc;
 mod world;
 mod server;
 mod messages;
-
+mod components;
+mod systems;
+mod network;
 
 
 #[tokio::main]
@@ -22,7 +24,9 @@ async fn main() -> anyhow::Result<()> {
         world_to_server_tx.clone(),
     ));
 
-    tokio::try_join!(server_handle, world_handle)?;
+    let (server_result, world_result) = tokio::try_join!(server_handle, world_handle)?;
+    println!("Server finished: {:?}", server_result);
+    println!("World finished: {:?}", world_result);
 
     Ok(())
 }

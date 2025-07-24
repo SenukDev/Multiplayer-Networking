@@ -1,0 +1,16 @@
+[package]
+name = "wt-client"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+hecs = "0.10.4"
+wasm-bindgen = "0.2"
+console_log = "1.0"
+console_error_panic_hook = "0.1"
+log = "0.4"
+web-sys = { version = "0.3", features = ["CanvasRenderingContext2d", "HtmlCanvasElement", "Document", "Window"] }
+uuid = { version = "1.3", features = ["js"] }

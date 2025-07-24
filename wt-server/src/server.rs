@@ -15,9 +15,8 @@ use uuid::Uuid;
 use dashmap::DashMap;
 use std::sync::Arc;
 use crate::messages::{ServerToWorld, WorldToServer};
-
+use crate::network::*;
 type ConnectionId = Uuid;
-
 type ConnectionMap = Arc<DashMap<ConnectionId, wtransport::Connection>>;
 
 
@@ -52,25 +51,27 @@ pub async fn run_server(
                     to_world.clone(),
                 ).instrument(info_span!("Connection", %connection_id)));
             }
-
-            // // Process messages from the world
-            // Some(msg) = from_world.recv() => {
-            //     match msg {
-            //         WorldToServer::SendToClient { connection_id, message } => {
-            //             println!("Send to client {}: {}", connection_id, message);
-            //             // TODO: lookup session and send the message
-            //         }
-            //         WorldToServer::DisconnectClient { connection_id } => {
-            //             println!("Disconnecting client {}", connection_id);
-            //             // TODO: remove session from session map
-            //         }
-            //     }
-            // }
-
-            // else => {
-            //     // If both channels are closed or unreachable
-            //     break;
-            // }
+            // Process messages from the world
+            Some(msg) = from_world.recv() => {
+                match msg {
+                    WorldToServer::SendTick { receiver_connection_id, tick } => {
+                        if let Some(connection) = connections.get(&receiver_connection_id) {
+                            let message = build_tick_datagram(tick);
+                            connection.send_datagram(message)?;
+                        }
+                    }
+                    WorldToServer::CreatePlayer { receiver_connection_id, connection_id, x, y } => {
+                        if let Some(connection) = connections.get(&receiver_connection_id) {
+                            let message = build_create_player_datagram(connection_id, x, y);
+                            connection.send_datagram(message)?;
+                        }
+                    }
+                }
+            }
+            else => {
+                // If both channels are closed or unreachable
+                return Ok(());
+            }
         }
     }
 }
@@ -100,12 +101,6 @@ async fn handle_connection_impl(
 
     connections.insert(connection_id, connection.clone());
     to_world.send(ServerToWorld::PlayerJoined { connection_id })?;
-
-    info!("Connection Map");
-    for entry in connections.iter() {
-        let id = entry.key();
-        info!("Connection ID: {}", id);
-    }
 
     loop {
         tokio::select! {
