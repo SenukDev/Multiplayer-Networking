@@ -63,6 +63,13 @@ pub async fn run_server(
                     WorldToServer::CreatePlayer { receiver_connection_id, connection_id, x, y } => {
                         if let Some(connection) = connections.get(&receiver_connection_id) {
                             let message = build_create_player_datagram(connection_id, x, y);
+                            let mut stream = connection.open_uni().await?.await?;
+                            stream.write_all(&message).await?;
+                        }
+                    }
+                    WorldToServer::UpdatePlayerPosition { receiver_connection_id, connection_id, x, y } => {
+                        if let Some(connection) = connections.get(&receiver_connection_id) {
+                            let message = build_update_player_position_datagram(connection_id, x, y);
                             connection.send_datagram(message)?;
                         }
                     }
@@ -137,12 +144,20 @@ async fn handle_connection_impl(
             }
             dgram = connection.receive_datagram() => {
                 let dgram = dgram?;
-                let str_data = std::str::from_utf8(&dgram)?;
 
-                info!("Received (dgram) '{str_data}' from client");
-                to_world.send(ServerToWorld::PlayerInput { connection_id: connection_id, input: str_data.to_string()})?;
-                
-                connection.send_datagram(b"ACK")?;
+                if dgram.is_empty() {
+                    info!("Empty datagram received");
+                } else {
+                    match ClientToServerMessage::from_u8(dgram[0]) {
+                        Some(ClientToServerMessage::InputClickPressed) => {
+                            decode_input_click_pressed(connection_id, to_world.clone(), &dgram);
+                        }
+
+                        None => {
+                            info!("Unknown message type: {}", dgram[0]);
+                        }
+                    }
+                }
             }
         }
     }

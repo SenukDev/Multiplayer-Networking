@@ -6,6 +6,7 @@ mod messages;
 mod components;
 mod systems;
 mod network;
+mod scripts;
 
 
 #[tokio::main]

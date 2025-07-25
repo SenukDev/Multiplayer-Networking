@@ -8,6 +8,17 @@ pub fn render(world: &World, context: &CanvasRenderingContext2d) -> Result<(), J
     context.set_fill_style(&JsValue::from_str("#000000"));
     context.fill_rect(0.0, 0.0, 512.0, 384.0);
     
+    //Draw collision lines
+    context.set_stroke_style(&JsValue::from_str("#FFFFFF"));
+    for (_, collision) in world.query::<&Collision>().iter() {
+        for line in &collision.collision_lines {
+            context.begin_path();
+            context.move_to(f64::from(line.x1), f64::from(line.y1));
+            context.line_to(f64::from(line.x2), f64::from(line.y2));
+            context.stroke();
+        }
+    }
+
     // Draw player
     context.set_stroke_style(&JsValue::from_str("#FFFFFF"));
     context.set_fill_style(&JsValue::from_str("#FFFFFF"));

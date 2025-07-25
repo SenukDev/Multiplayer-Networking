@@ -25,3 +25,16 @@ pub struct PlayerCollision {
     pub offset_x: f32,
     pub offset_y: f32,
 }
+
+#[derive(Debug)]
+pub struct CollisionLine {
+    pub x1: f32,
+    pub y1: f32,
+    pub x2: f32,
+    pub y2: f32,
+}
+
+#[derive(Debug)]
+pub struct Collision {
+    pub collision_lines: Vec<CollisionLine>, 
+}
